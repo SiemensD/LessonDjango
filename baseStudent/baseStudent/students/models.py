@@ -4,8 +4,8 @@ from tokenize import group
 from django.db import models
 
 # Create your models here.
-class Sabject(models.Model):
-    name = models.CharField(verbose_name='имя',
+class Subject(models.Model):
+    name = models.CharField(verbose_name='Имя',
                             max_length=100)
 
     def __str__(self) -> str:
@@ -25,7 +25,7 @@ class StudentGroup(models.Model):
                                           blank=True,                                          
                                           null=True)
 
-    subject = models.ForeignKey(Sabject,
+    subject = models.ForeignKey(Subject,
                                 verbose_name='Предмет',
                                 on_delete=models.SET_NULL,
                                 blank=True,
