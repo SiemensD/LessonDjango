@@ -3,7 +3,6 @@ from django.urls import path
 
 from students.views import MyViwe
 
-urlpatterns = [
-    
+urlpatterns = [    
     path('viwe/<pk>', MyViwe.as_view())
 ]
